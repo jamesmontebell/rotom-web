@@ -103,6 +103,19 @@
             height: 21px;
         }
 
+        .cta-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 12px;
+        }
+
+        .available-soon {
+            font-size: 14px;
+            color: #6B6B70;
+            font-weight: 500;
+        }
+
         .hero-image {
             width: 375px;
             height: auto;
@@ -559,6 +572,10 @@
                 text-align: center;
             }
 
+            .cta-wrapper {
+                align-items: center;
+            }
+
             .hero-image {
                 width: 300px;
             }
@@ -663,10 +680,13 @@
             </div>
             <h1 class="hero-headline">Know What Your<br>Cards Are Worth.</h1>
             <p class="hero-subtext">Scan any Pokémon card. See real prices from actual sales. No guessing, no spreadsheets, no digging through eBay.</p>
-            <a href="#" class="primary-cta" onclick="alert('Available soon!'); return false;">
-                <img src="images/apple-logo.png" alt="Apple">
-                Download on iOS
-            </a>
+            <div class="cta-wrapper">
+                <a href="#" class="primary-cta" onclick="alert('Available soon!'); return false;">
+                    <img src="images/apple-logo.png" alt="Apple">
+                    Download on iOS
+                </a>
+                <span class="available-soon">Available soon</span>
+            </div>
         </div>
         <img src="images/iphone17pro.png" alt="MoniDex AI App Preview" class="hero-image">
     </section>
@@ -859,6 +879,7 @@
                 <img src="images/apple-logo.png" alt="Apple">
                 Download on iOS
             </a>
+            <span class="available-soon">Available soon</span>
             <p class="trust-line">Free to download</p>
         </div>
     </section>
