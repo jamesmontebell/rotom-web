@@ -1,0 +1,1458 @@
+{
+  "version": "2.6",
+  "children": [
+    {
+      "type": "frame",
+      "id": "YdtNs",
+      "x": 0,
+      "y": 0,
+      "name": "Landing Page",
+      "width": 1440,
+      "fill": "#0B0B0E",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "aCXhw",
+          "name": "Hero Section",
+          "width": "fill_container",
+          "gap": 60,
+          "padding": [
+            100,
+            120
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "ra2L2",
+              "name": "Hero Left Content",
+              "width": 500,
+              "layout": "vertical",
+              "gap": 28,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "W1ps2",
+                  "name": "Logo Row",
+                  "gap": 12,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "rectangle",
+                      "id": "aMGJV",
+                      "rotation": -540,
+                      "flipX": true,
+                      "flipY": true,
+                      "fill": {
+                        "type": "image",
+                        "enabled": true,
+                        "url": "images/moni-ios-iOS-Default-1024x1024@1x.png",
+                        "mode": "fill"
+                      },
+                      "width": 48,
+                      "height": 48
+                    },
+                    {
+                      "type": "text",
+                      "id": "2jGqL",
+                      "name": "logoText",
+                      "fill": "#FAFAF9",
+                      "content": "MoniDex AI",
+                      "fontFamily": "Outfit",
+                      "fontSize": 24,
+                      "fontWeight": "600"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "khKJB",
+                  "name": "heroHeadline",
+                  "fill": "#FAFAF9",
+                  "content": "Know What Your\nCards Are Worth.",
+                  "lineHeight": 1.1,
+                  "fontFamily": "Outfit",
+                  "fontSize": 56,
+                  "fontWeight": "700",
+                  "letterSpacing": -1.5
+                },
+                {
+                  "type": "text",
+                  "id": "lP4I6",
+                  "name": "heroSubtext",
+                  "fill": "#6B6B70",
+                  "textGrowth": "fixed-width",
+                  "width": 450,
+                  "content": "Scan any Pokémon card. See real prices from actual sales. No guessing, no spreadsheets, no digging through eBay.",
+                  "lineHeight": 1.6,
+                  "fontFamily": "Outfit",
+                  "fontSize": 18
+                },
+                {
+                  "type": "frame",
+                  "id": "fZLrj",
+                  "name": "Primary CTA",
+                  "fill": "#FAFAF9",
+                  "cornerRadius": 100,
+                  "gap": 10,
+                  "padding": [
+                    18,
+                    32
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "rectangle",
+                      "id": "jAHyo",
+                      "fill": {
+                        "type": "image",
+                        "enabled": true,
+                        "url": "images/apple-logo.png",
+                        "mode": "fill"
+                      },
+                      "width": 21,
+                      "height": 21
+                    },
+                    {
+                      "type": "text",
+                      "id": "xmxjG",
+                      "name": "primaryText",
+                      "fill": "#0B0B0E",
+                      "content": "Download on iOS",
+                      "fontFamily": "Outfit",
+                      "fontSize": 16,
+                      "fontWeight": "600"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "rectangle",
+              "id": "CCae0",
+              "fill": {
+                "type": "image",
+                "enabled": true,
+                "url": "images/iphone17pro.png",
+                "mode": "fill"
+              },
+              "width": 375,
+              "height": 762
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "U5uEA",
+          "name": "How It Works Section",
+          "width": "fill_container",
+          "fill": "#0B0B0E",
+          "layout": "vertical",
+          "gap": 56,
+          "padding": [
+            100,
+            120
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "VLZTZ",
+              "name": "Section Header",
+              "layout": "vertical",
+              "gap": 16,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "tx02J",
+                  "name": "howLabel",
+                  "fill": "#6B6B70",
+                  "content": "HOW IT WORKS",
+                  "fontFamily": "Outfit",
+                  "fontSize": 12,
+                  "fontWeight": "600",
+                  "letterSpacing": 2
+                },
+                {
+                  "type": "text",
+                  "id": "2fclT",
+                  "name": "howTitle",
+                  "fill": "#FAFAF9",
+                  "content": "Three steps. That's it.",
+                  "fontFamily": "Outfit",
+                  "fontSize": 40,
+                  "fontWeight": "700",
+                  "letterSpacing": -0.5
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "0wqiI",
+              "name": "Steps Row",
+              "width": "fill_container",
+              "gap": 40,
+              "justifyContent": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "eleSY",
+                  "name": "Step 1",
+                  "width": 320,
+                  "fill": "#16161A",
+                  "cornerRadius": 16,
+                  "layout": "vertical",
+                  "gap": 20,
+                  "padding": 32,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "kFnZR",
+                      "name": "step1Number",
+                      "width": 48,
+                      "height": 48,
+                      "fill": "#1A1A1E",
+                      "cornerRadius": 24,
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "#2A2A2E"
+                      },
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "2XIgV",
+                          "name": "step1NumText",
+                          "fill": "#FAFAF9",
+                          "content": "1",
+                          "fontFamily": "Outfit",
+                          "fontSize": 20,
+                          "fontWeight": "600"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "icon_font",
+                      "id": "gtAFl",
+                      "name": "step1Icon",
+                      "width": 40,
+                      "height": 40,
+                      "iconFontName": "scan",
+                      "iconFontFamily": "lucide",
+                      "fill": "#FAFAF9"
+                    },
+                    {
+                      "type": "text",
+                      "id": "kHVBq",
+                      "name": "step1Title",
+                      "fill": "#FAFAF9",
+                      "content": "Scan a card",
+                      "fontFamily": "Outfit",
+                      "fontSize": 20,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "U6Dk7",
+                      "name": "step1Desc",
+                      "fill": "#6B6B70",
+                      "textGrowth": "fixed-width",
+                      "width": 256,
+                      "content": "Point your camera at any Pokémon card. The app identifies it instantly.",
+                      "lineHeight": 1.5,
+                      "textAlign": "center",
+                      "fontFamily": "Outfit",
+                      "fontSize": 15
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "v2aCm",
+                  "name": "Step 2",
+                  "width": 320,
+                  "fill": "#16161A",
+                  "cornerRadius": 16,
+                  "layout": "vertical",
+                  "gap": 20,
+                  "padding": 32,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "ZtMhA",
+                      "name": "step2Number",
+                      "width": 48,
+                      "height": 48,
+                      "fill": "#1A1A1E",
+                      "cornerRadius": 24,
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "#2A2A2E"
+                      },
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "12ZdR",
+                          "name": "step2NumText",
+                          "fill": "#FAFAF9",
+                          "content": "2",
+                          "fontFamily": "Outfit",
+                          "fontSize": 20,
+                          "fontWeight": "600"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "icon_font",
+                      "id": "DBYkz",
+                      "name": "step2Icon",
+                      "width": 40,
+                      "height": 40,
+                      "iconFontName": "list",
+                      "iconFontFamily": "lucide",
+                      "fill": "#FAFAF9"
+                    },
+                    {
+                      "type": "text",
+                      "id": "vYFDD",
+                      "name": "step2Title",
+                      "fill": "#FAFAF9",
+                      "content": "See real sales",
+                      "fontFamily": "Outfit",
+                      "fontSize": 20,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "JCaWw",
+                      "name": "step2Desc",
+                      "fill": "#6B6B70",
+                      "textGrowth": "fixed-width",
+                      "width": 256,
+                      "content": "View actual sold prices from eBay—filtered by grading company and condition.",
+                      "lineHeight": 1.5,
+                      "textAlign": "center",
+                      "fontFamily": "Outfit",
+                      "fontSize": 15
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "n4w8v",
+                  "name": "Step 3",
+                  "width": 320,
+                  "fill": "#16161A",
+                  "cornerRadius": 16,
+                  "layout": "vertical",
+                  "gap": 20,
+                  "padding": 32,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "EbDtm",
+                      "name": "step3Number",
+                      "width": 48,
+                      "height": 48,
+                      "fill": "#1A1A1E",
+                      "cornerRadius": 24,
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "#2A2A2E"
+                      },
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "d80Ck",
+                          "name": "step3NumText",
+                          "fill": "#FAFAF9",
+                          "content": "3",
+                          "fontFamily": "Outfit",
+                          "fontSize": 20,
+                          "fontWeight": "600"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "icon_font",
+                      "id": "7WkO5",
+                      "name": "step3Icon",
+                      "width": 40,
+                      "height": 40,
+                      "iconFontName": "circle-check",
+                      "iconFontFamily": "lucide",
+                      "fill": "#FAFAF9"
+                    },
+                    {
+                      "type": "text",
+                      "id": "xCpVo",
+                      "name": "step3Title",
+                      "fill": "#FAFAF9",
+                      "content": "Know what it's worth",
+                      "fontFamily": "Outfit",
+                      "fontSize": 20,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "wxlFl",
+                      "name": "step3Desc",
+                      "fill": "#6B6B70",
+                      "textGrowth": "fixed-width",
+                      "width": 256,
+                      "content": "Make informed decisions. Buy, sell, or hold with confidence.",
+                      "lineHeight": 1.5,
+                      "textAlign": "center",
+                      "fontFamily": "Outfit",
+                      "fontSize": 15
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "ctB1q",
+          "name": "Why Better Section",
+          "width": "fill_container",
+          "fill": "#16161A",
+          "layout": "vertical",
+          "gap": 56,
+          "padding": [
+            100,
+            120
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "3jKny",
+              "name": "Section Header",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 16,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "tsain",
+                  "name": "whyLabel",
+                  "fill": "#6B6B70",
+                  "content": "WHY IT'S BETTER",
+                  "fontFamily": "Outfit",
+                  "fontSize": 12,
+                  "fontWeight": "600",
+                  "letterSpacing": 2
+                },
+                {
+                  "type": "text",
+                  "id": "DWCA3",
+                  "name": "whyTitle",
+                  "fill": "#FAFAF9",
+                  "content": "Prices you can trust.",
+                  "fontFamily": "Outfit",
+                  "fontSize": 40,
+                  "fontWeight": "700",
+                  "letterSpacing": -0.5
+                },
+                {
+                  "type": "text",
+                  "id": "8LFD2",
+                  "name": "whySubtitle",
+                  "fill": "#6B6B70",
+                  "textGrowth": "fixed-width",
+                  "width": 600,
+                  "content": "No guesswork. No averages pulled from thin air. Just real data from real sales.",
+                  "lineHeight": 1.5,
+                  "fontFamily": "Outfit",
+                  "fontSize": 18
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "R8xTm",
+              "name": "Benefits Grid",
+              "width": "fill_container",
+              "gap": 24,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "221JW",
+                  "name": "Benefit 1",
+                  "width": "fill_container",
+                  "fill": "#0B0B0E",
+                  "cornerRadius": 16,
+                  "layout": "vertical",
+                  "gap": 16,
+                  "padding": 28,
+                  "children": [
+                    {
+                      "type": "icon_font",
+                      "id": "TqADC",
+                      "name": "benefit1Icon",
+                      "width": 32,
+                      "height": 32,
+                      "iconFontName": "database",
+                      "iconFontFamily": "lucide",
+                      "fill": "#FAFAF9"
+                    },
+                    {
+                      "type": "text",
+                      "id": "kiMpi",
+                      "name": "benefit1Title",
+                      "fill": "#FAFAF9",
+                      "content": "Real sold listings",
+                      "fontFamily": "Outfit",
+                      "fontSize": 18,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "ny5mG",
+                      "name": "benefit1Desc",
+                      "fill": "#6B6B70",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "We pull actual completed sales from eBay. Not asking prices. Not estimates.",
+                      "lineHeight": 1.5,
+                      "fontFamily": "Outfit",
+                      "fontSize": 15
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "BEFbA",
+                  "name": "Benefit 2",
+                  "width": "fill_container",
+                  "fill": "#0B0B0E",
+                  "cornerRadius": 16,
+                  "layout": "vertical",
+                  "gap": 16,
+                  "padding": 28,
+                  "children": [
+                    {
+                      "type": "icon_font",
+                      "id": "HaP0c",
+                      "name": "benefit2Icon",
+                      "width": 32,
+                      "height": 32,
+                      "iconFontName": "award",
+                      "iconFontFamily": "lucide",
+                      "fill": "#FAFAF9"
+                    },
+                    {
+                      "type": "text",
+                      "id": "SX6Mi",
+                      "name": "benefit2Title",
+                      "fill": "#FAFAF9",
+                      "content": "PSA, BGS, CGC support",
+                      "fontFamily": "Outfit",
+                      "fontSize": 18,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "S9ZdG",
+                      "name": "benefit2Desc",
+                      "fill": "#6B6B70",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Filter by the grading company that matters to you. See prices for each grade level.",
+                      "lineHeight": 1.5,
+                      "fontFamily": "Outfit",
+                      "fontSize": 15
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "wmp8J",
+                  "name": "Benefit 3",
+                  "width": "fill_container",
+                  "fill": "#0B0B0E",
+                  "cornerRadius": 16,
+                  "layout": "vertical",
+                  "gap": 16,
+                  "padding": 28,
+                  "children": [
+                    {
+                      "type": "icon_font",
+                      "id": "GkIJn",
+                      "name": "benefit3Icon",
+                      "width": 32,
+                      "height": 32,
+                      "iconFontName": "zap",
+                      "iconFontFamily": "lucide",
+                      "fill": "#FAFAF9"
+                    },
+                    {
+                      "type": "text",
+                      "id": "ztzAS",
+                      "name": "benefit3Title",
+                      "fill": "#FAFAF9",
+                      "content": "No manual searching",
+                      "fontFamily": "Outfit",
+                      "fontSize": 18,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "VXoAx",
+                      "name": "benefit3Desc",
+                      "fill": "#6B6B70",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Stop scrolling through eBay listings. Point, scan, done. The data comes to you.",
+                      "lineHeight": 1.5,
+                      "fontFamily": "Outfit",
+                      "fontSize": 15
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "KwLcE",
+          "name": "Product Preview Section",
+          "width": "fill_container",
+          "fill": "#0B0B0E",
+          "layout": "vertical",
+          "gap": 56,
+          "padding": [
+            100,
+            120
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "VXvzd",
+              "name": "Section Header",
+              "layout": "vertical",
+              "gap": 16,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "BCoTG",
+                  "name": "previewLabel",
+                  "fill": "#6B6B70",
+                  "content": "THE APP",
+                  "fontFamily": "Outfit",
+                  "fontSize": 12,
+                  "fontWeight": "600",
+                  "letterSpacing": 2
+                },
+                {
+                  "type": "text",
+                  "id": "YjUp2",
+                  "name": "previewTitle",
+                  "fill": "#FAFAF9",
+                  "content": "Price clarity at a glance.",
+                  "fontFamily": "Outfit",
+                  "fontSize": 40,
+                  "fontWeight": "700",
+                  "letterSpacing": -0.5
+                },
+                {
+                  "type": "text",
+                  "id": "l61sR",
+                  "name": "previewSubtitle",
+                  "fill": "#6B6B70",
+                  "content": "Clean interface. Real data. Nothing in the way.",
+                  "fontFamily": "Outfit",
+                  "fontSize": 18
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "5qNg9",
+              "name": "Preview Cards",
+              "width": "fill_container",
+              "gap": 32,
+              "justifyContent": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "NtDyp",
+                  "name": "Preview Card 1",
+                  "width": 280,
+                  "fill": "#16161A",
+                  "cornerRadius": 16,
+                  "layout": "vertical",
+                  "gap": 16,
+                  "padding": 20,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "5R1V4",
+                      "name": "card1Header",
+                      "width": "fill_container",
+                      "gap": 12,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "CltSt",
+                          "name": "card1Icon",
+                          "width": 40,
+                          "height": 40,
+                          "fill": "#0B0B0E",
+                          "cornerRadius": 8,
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "icon_font",
+                              "id": "QGMY3",
+                              "name": "card1IconInner",
+                              "width": 20,
+                              "height": 20,
+                              "iconFontName": "chart-bar",
+                              "iconFontFamily": "lucide",
+                              "fill": "#FAFAF9"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "hEYqC",
+                          "name": "card1TitleGroup",
+                          "width": "fill_container",
+                          "layout": "vertical",
+                          "gap": 2,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "2iUwj",
+                              "name": "card1Title",
+                              "fill": "#FAFAF9",
+                              "content": "Grade filtering",
+                              "fontFamily": "Outfit",
+                              "fontSize": 16,
+                              "fontWeight": "600"
+                            },
+                            {
+                              "type": "text",
+                              "id": "NsKBM",
+                              "name": "card1Sub",
+                              "fill": "#6B6B70",
+                              "content": "PSA 10, PSA 9, etc.",
+                              "fontFamily": "Outfit",
+                              "fontSize": 13
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "IeWeI",
+                      "name": "card1Desc",
+                      "fill": "#6B6B70",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "See prices broken down by grade. A PSA 10 and a PSA 8 aren't the same value—we show you both.",
+                      "lineHeight": 1.5,
+                      "fontFamily": "Outfit",
+                      "fontSize": 14
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "iOeGU",
+                  "name": "Preview Card 2",
+                  "width": 280,
+                  "fill": "#16161A",
+                  "cornerRadius": 16,
+                  "layout": "vertical",
+                  "gap": 16,
+                  "padding": 20,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "4Y0tK",
+                      "name": "card2Header",
+                      "width": "fill_container",
+                      "gap": 12,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "6t27i",
+                          "name": "card2Icon",
+                          "width": 40,
+                          "height": 40,
+                          "fill": "#0B0B0E",
+                          "cornerRadius": 8,
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "icon_font",
+                              "id": "jiBvw",
+                              "name": "card2IconInner",
+                              "width": 20,
+                              "height": 20,
+                              "iconFontName": "history",
+                              "iconFontFamily": "lucide",
+                              "fill": "#FAFAF9"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "sQn1T",
+                          "name": "card2TitleGroup",
+                          "width": "fill_container",
+                          "layout": "vertical",
+                          "gap": 2,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "5dECh",
+                              "name": "card2Title",
+                              "fill": "#FAFAF9",
+                              "content": "Sale history",
+                              "fontFamily": "Outfit",
+                              "fontSize": 16,
+                              "fontWeight": "600"
+                            },
+                            {
+                              "type": "text",
+                              "id": "cJNeO",
+                              "name": "card2Sub",
+                              "fill": "#6B6B70",
+                              "content": "Recent transactions",
+                              "fontFamily": "Outfit",
+                              "fontSize": 13
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "cjuFK",
+                      "name": "card2Desc",
+                      "fill": "#6B6B70",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Every sale with date, price, and a direct link to the original eBay listing for verification.",
+                      "lineHeight": 1.5,
+                      "fontFamily": "Outfit",
+                      "fontSize": 14
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "DW3yi",
+                  "name": "Preview Card 3",
+                  "width": 280,
+                  "fill": "#16161A",
+                  "cornerRadius": 16,
+                  "layout": "vertical",
+                  "gap": 16,
+                  "padding": 20,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "l7bBc",
+                      "name": "card3Header",
+                      "width": "fill_container",
+                      "gap": 12,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "ARuRh",
+                          "name": "card3Icon",
+                          "width": 40,
+                          "height": 40,
+                          "fill": "#0B0B0E",
+                          "cornerRadius": 8,
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "icon_font",
+                              "id": "D0aqx",
+                              "name": "card3IconInner",
+                              "width": 20,
+                              "height": 20,
+                              "iconFontName": "shield",
+                              "iconFontFamily": "lucide",
+                              "fill": "#FAFAF9"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "vmhwA",
+                          "name": "card3TitleGroup",
+                          "width": "fill_container",
+                          "layout": "vertical",
+                          "gap": 2,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "0DLYK",
+                              "name": "card3Title",
+                              "fill": "#FAFAF9",
+                              "content": "Grading services",
+                              "fontFamily": "Outfit",
+                              "fontSize": 16,
+                              "fontWeight": "600"
+                            },
+                            {
+                              "type": "text",
+                              "id": "QlOKG",
+                              "name": "card3Sub",
+                              "fill": "#6B6B70",
+                              "content": "PSA, BGS, CGC, TAG",
+                              "fontFamily": "Outfit",
+                              "fontSize": 13
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "WdTRw",
+                      "name": "card3Desc",
+                      "fill": "#6B6B70",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Switch between grading companies with a tap. Compare market values across different authenticators.",
+                      "lineHeight": 1.5,
+                      "fontFamily": "Outfit",
+                      "fontSize": 14
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "tQwT1",
+          "name": "Who Its For Section",
+          "width": "fill_container",
+          "fill": "#16161A",
+          "layout": "vertical",
+          "gap": 56,
+          "padding": [
+            100,
+            120
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "8VPLe",
+              "name": "Section Header",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 16,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "Klcgh",
+                  "name": "whoLabel",
+                  "fill": "#6B6B70",
+                  "content": "WHO IT'S FOR",
+                  "fontFamily": "Outfit",
+                  "fontSize": 12,
+                  "fontWeight": "600",
+                  "letterSpacing": 2
+                },
+                {
+                  "type": "text",
+                  "id": "Z2xDW",
+                  "name": "whoTitle",
+                  "fill": "#FAFAF9",
+                  "content": "Built for people who care about accuracy.",
+                  "textAlign": "center",
+                  "fontFamily": "Outfit",
+                  "fontSize": 40,
+                  "fontWeight": "700",
+                  "letterSpacing": -0.5
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "2j1nB",
+              "name": "Who Grid",
+              "width": "fill_container",
+              "gap": 32,
+              "justifyContent": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "xkaYH",
+                  "name": "Who 1",
+                  "width": 350,
+                  "fill": "#0B0B0E",
+                  "cornerRadius": 16,
+                  "layout": "vertical",
+                  "gap": 16,
+                  "padding": 32,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "h98rN",
+                      "name": "who1Icon",
+                      "width": 56,
+                      "height": 56,
+                      "fill": "#16161A",
+                      "cornerRadius": 28,
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon_font",
+                          "id": "HvaTz",
+                          "name": "who1IconInner",
+                          "width": 28,
+                          "height": 28,
+                          "iconFontName": "heart",
+                          "iconFontFamily": "lucide",
+                          "fill": "#FAFAF9"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "S2d83",
+                      "name": "who1Title",
+                      "fill": "#FAFAF9",
+                      "content": "Collectors",
+                      "fontFamily": "Outfit",
+                      "fontSize": 20,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "yPYrP",
+                      "name": "who1Desc",
+                      "fill": "#6B6B70",
+                      "textGrowth": "fixed-width",
+                      "width": 286,
+                      "content": "Know exactly what you have. Track your collection's real market value without guesswork.",
+                      "lineHeight": 1.5,
+                      "textAlign": "center",
+                      "fontFamily": "Outfit",
+                      "fontSize": 15
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "rhfub",
+                  "name": "Who 2",
+                  "width": 350,
+                  "fill": "#0B0B0E",
+                  "cornerRadius": 16,
+                  "layout": "vertical",
+                  "gap": 16,
+                  "padding": 32,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "xR6Va",
+                      "name": "who2Icon",
+                      "width": 56,
+                      "height": 56,
+                      "fill": "#16161A",
+                      "cornerRadius": 28,
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon_font",
+                          "id": "VF0Ik",
+                          "name": "who2IconInner",
+                          "width": 28,
+                          "height": 28,
+                          "iconFontName": "tag",
+                          "iconFontFamily": "lucide",
+                          "fill": "#FAFAF9"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "VX322",
+                      "name": "who2Title",
+                      "fill": "#FAFAF9",
+                      "content": "Sellers",
+                      "fontFamily": "Outfit",
+                      "fontSize": 20,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "tfp2q",
+                      "name": "who2Desc",
+                      "fill": "#6B6B70",
+                      "textGrowth": "fixed-width",
+                      "width": 286,
+                      "content": "Price your cards right the first time. Don't leave money on the table or sit on overpriced listings.",
+                      "lineHeight": 1.5,
+                      "textAlign": "center",
+                      "fontFamily": "Outfit",
+                      "fontSize": 15
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "l2gZK",
+                  "name": "Who 3",
+                  "width": 350,
+                  "height": 246,
+                  "fill": "#0B0B0E",
+                  "cornerRadius": 16,
+                  "layout": "vertical",
+                  "gap": 16,
+                  "padding": 32,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "vbN5t",
+                      "name": "who3Icon",
+                      "width": 56,
+                      "height": 56,
+                      "fill": "#16161A",
+                      "cornerRadius": 28,
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon_font",
+                          "id": "bKr2R",
+                          "name": "who3IconInner",
+                          "width": 28,
+                          "height": 28,
+                          "iconFontName": "shopping-cart",
+                          "iconFontFamily": "lucide",
+                          "fill": "#FAFAF9"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "5aA0O",
+                      "name": "who3Title",
+                      "fill": "#FAFAF9",
+                      "content": "Buyers",
+                      "fontFamily": "Outfit",
+                      "fontSize": 20,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "ZHJRK",
+                      "name": "who3Desc",
+                      "fill": "#6B6B70",
+                      "textGrowth": "fixed-width",
+                      "width": 286,
+                      "content": "Stop overpaying. Know if a deal is fair before you commit to it.",
+                      "lineHeight": 1.5,
+                      "textAlign": "center",
+                      "fontFamily": "Outfit",
+                      "fontSize": 15
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "UJIsw",
+          "name": "Final CTA Section",
+          "width": "fill_container",
+          "fill": "#0B0B0E",
+          "layout": "vertical",
+          "gap": 28,
+          "padding": [
+            100,
+            120
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "KdDDS",
+              "name": "CTA Content",
+              "layout": "vertical",
+              "gap": 24,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "bneYV",
+                  "name": "ctaHeadline",
+                  "fill": "#FAFAF9",
+                  "content": "Stop guessing. Start knowing.",
+                  "textAlign": "center",
+                  "fontFamily": "Outfit",
+                  "fontSize": 48,
+                  "fontWeight": "700",
+                  "letterSpacing": -1
+                },
+                {
+                  "type": "text",
+                  "id": "NBk1G",
+                  "name": "ctaSubtext",
+                  "fill": "#6B6B70",
+                  "content": "Download the app and see what your cards are actually worth.",
+                  "textAlign": "center",
+                  "fontFamily": "Outfit",
+                  "fontSize": 18
+                },
+                {
+                  "type": "frame",
+                  "id": "jHFpW",
+                  "name": "CTA Buttons",
+                  "gap": 16,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "SmQAa",
+                      "name": "Primary CTA",
+                      "fill": "#FAFAF9",
+                      "cornerRadius": 8,
+                      "gap": 10,
+                      "padding": [
+                        18,
+                        40
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "rectangle",
+                          "id": "wQdW9",
+                          "fill": {
+                            "type": "image",
+                            "enabled": true,
+                            "url": "images/apple-logo.png",
+                            "mode": "fill"
+                          },
+                          "width": 21,
+                          "height": 21
+                        },
+                        {
+                          "type": "text",
+                          "id": "8tkzj",
+                          "name": "ctaPrimaryText",
+                          "fill": "#0B0B0E",
+                          "content": "Download on iOS",
+                          "fontFamily": "Outfit",
+                          "fontSize": 16,
+                          "fontWeight": "600"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "T9Q0d",
+                  "name": "trustLine",
+                  "fill": "#4A4A50",
+                  "content": "Free to download • No account required to scan",
+                  "fontFamily": "Outfit",
+                  "fontSize": 14
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "sfC68",
+          "name": "Footer",
+          "width": "fill_container",
+          "fill": "#16161A",
+          "layout": "vertical",
+          "gap": 48,
+          "padding": [
+            64,
+            120
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "0aoky",
+              "name": "Footer Top",
+              "width": "fill_container",
+              "justifyContent": "space_between",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "4i3W8",
+                  "name": "Footer Brand",
+                  "width": 300,
+                  "layout": "vertical",
+                  "gap": 16,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "188g2",
+                      "name": "footerLogoRow",
+                      "gap": 12,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "rectangle",
+                          "id": "jRsZV",
+                          "fill": {
+                            "type": "image",
+                            "enabled": true,
+                            "url": "images/moni-ios-iOS-Default-1024x1024@1x.png",
+                            "mode": "fill"
+                          },
+                          "width": 32,
+                          "height": 32
+                        },
+                        {
+                          "type": "text",
+                          "id": "0J9lm",
+                          "name": "footerLogoText",
+                          "fill": "#FAFAF9",
+                          "content": "MoniDex AI",
+                          "fontFamily": "Outfit",
+                          "fontSize": 18,
+                          "fontWeight": "600"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "9VbmR",
+                      "name": "footerTagline",
+                      "fill": "#6B6B70",
+                      "content": "Real Pokémon card prices from real sales.",
+                      "fontFamily": "Outfit",
+                      "fontSize": 14
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "QnFeE",
+                  "name": "Footer Links",
+                  "gap": 80,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "SGOPx",
+                      "name": "Legal Column",
+                      "layout": "vertical",
+                      "gap": 16,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "JA1f7",
+                          "name": "footerCol3Title",
+                          "fill": "#FAFAF9",
+                          "content": "Legal",
+                          "fontFamily": "Outfit",
+                          "fontSize": 14,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "Yorr3",
+                          "name": "footerCol3Links",
+                          "layout": "vertical",
+                          "gap": 12,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "HWilI",
+                              "name": "footerLink3a",
+                              "fill": "#6B6B70",
+                              "content": "Privacy Policy",
+                              "fontFamily": "Outfit",
+                              "fontSize": 14
+                            },
+                            {
+                              "type": "text",
+                              "id": "Kqkkd",
+                              "name": "footerLink3b",
+                              "fill": "#6B6B70",
+                              "content": "Terms of Service",
+                              "fontFamily": "Outfit",
+                              "fontSize": 14
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "KgRTY",
+              "name": "Divider",
+              "width": "fill_container",
+              "height": 1,
+              "fill": "#2A2A2E"
+            },
+            {
+              "type": "frame",
+              "id": "VYdAL",
+              "name": "Footer Bottom",
+              "width": "fill_container",
+              "justifyContent": "space_between",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "xK6uJ",
+                  "name": "footerCopyright",
+                  "fill": "#4A4A50",
+                  "content": "© 2026 MoniDex AI. All rights reserved.",
+                  "fontFamily": "Outfit",
+                  "fontSize": 13
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
