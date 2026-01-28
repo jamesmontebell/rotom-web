@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MoniDex AI - Know What Your Cards Are Worth</title>
+    <meta name="description" content="Scan any Pokémon card. See real prices from actual sales. No guessing, no spreadsheets, no digging through eBay.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="images/moni-ios-iOS-Default-1024x1024@1x.png">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background-color: #0B0B0E;
+            color: #FAFAF9;
+            line-height: 1.5;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Hero Section */
+        .hero {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 100px 120px;
+            gap: 60px;
+            max-width: 1440px;
+            margin: 0 auto;
+        }
+
+        .hero-content {
+            display: flex;
+            flex-direction: column;
+            gap: 28px;
+            max-width: 500px;
+        }
+
+        .logo-row {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 8px;
+            object-fit: cover;
+        }
+
+        .logo-text {
+            font-size: 24px;
+            font-weight: 600;
+        }
+
+        .hero-headline {
+            font-size: 56px;
+            font-weight: 700;
+            letter-spacing: -1.5px;
+            line-height: 1.1;
+        }
+
+        .hero-subtext {
+            font-size: 18px;
+            color: #6B6B70;
+            line-height: 1.6;
+            max-width: 450px;
+        }
+
+        .primary-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background-color: #FAFAF9;
+            color: #0B0B0E;
+            padding: 18px 32px;
+            border-radius: 100px;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 600;
+            transition: transform 0.2s, box-shadow 0.2s;
+            width: fit-content;
+        }
+
+        .primary-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 20px rgba(250, 250, 249, 0.2);
+        }
+
+        .primary-cta img {
+            width: 21px;
+            height: 21px;
+        }
+
+        .hero-image {
+            width: 375px;
+            height: auto;
+            flex-shrink: 0;
+        }
+
+        /* How It Works Section */
+        .how-it-works {
+            background-color: #0B0B0E;
+            padding: 100px 120px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 56px;
+        }
+
+        .section-header {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .section-label {
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 2px;
+            color: #6B6B70;
+            text-transform: uppercase;
+        }
+
+        .section-title {
+            font-size: 40px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+
+        .section-subtitle {
+            font-size: 18px;
+            color: #6B6B70;
+            max-width: 600px;
+            line-height: 1.5;
+        }
+
+        .steps-row {
+            display: flex;
+            gap: 40px;
+            justify-content: center;
+            flex-wrap: wrap;
+            width: 100%;
+        }
+
+        .step-card {
+            background-color: #16161A;
+            border-radius: 16px;
+            padding: 32px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            width: 320px;
+        }
+
+        .step-number {
+            width: 48px;
+            height: 48px;
+            border-radius: 24px;
+            background-color: #1A1A1E;
+            border: 1px solid #2A2A2E;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        .step-icon {
+            width: 40px;
+            height: 40px;
+        }
+
+        .step-title {
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        .step-desc {
+            font-size: 15px;
+            color: #6B6B70;
+            text-align: center;
+            line-height: 1.5;
+        }
+
+        /* Why Better Section */
+        .why-better {
+            background-color: #16161A;
+            padding: 100px 120px;
+            display: flex;
+            flex-direction: column;
+            gap: 56px;
+        }
+
+        .why-better .section-header {
+            text-align: left;
+            align-items: flex-start;
+        }
+
+        .benefits-grid {
+            display: flex;
+            gap: 24px;
+            flex-wrap: wrap;
+        }
+
+        .benefit-card {
+            background-color: #0B0B0E;
+            border-radius: 16px;
+            padding: 28px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            flex: 1;
+            min-width: 280px;
+        }
+
+        .benefit-icon {
+            width: 32px;
+            height: 32px;
+        }
+
+        .benefit-title {
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        .benefit-desc {
+            font-size: 15px;
+            color: #6B6B70;
+            line-height: 1.5;
+        }
+
+        /* Product Preview Section */
+        .product-preview {
+            background-color: #0B0B0E;
+            padding: 100px 120px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 56px;
+        }
+
+        .preview-cards {
+            display: flex;
+            gap: 32px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .preview-card {
+            background-color: #16161A;
+            border-radius: 16px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            width: 280px;
+        }
+
+        .preview-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .preview-icon {
+            width: 40px;
+            height: 40px;
+            background-color: #0B0B0E;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .preview-icon svg {
+            width: 20px;
+            height: 20px;
+        }
+
+        .preview-title-group {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+
+        .preview-title {
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        .preview-subtitle {
+            font-size: 13px;
+            color: #6B6B70;
+        }
+
+        .preview-desc {
+            font-size: 14px;
+            color: #6B6B70;
+            line-height: 1.5;
+        }
+
+        /* Who Its For Section */
+        .who-its-for {
+            background-color: #16161A;
+            padding: 100px 120px;
+            display: flex;
+            flex-direction: column;
+            gap: 56px;
+        }
+
+        .who-its-for .section-header {
+            align-items: center;
+        }
+
+        .who-grid {
+            display: flex;
+            gap: 32px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .who-card {
+            background-color: #0B0B0E;
+            border-radius: 16px;
+            padding: 32px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 16px;
+            width: 350px;
+        }
+
+        .who-icon {
+            width: 56px;
+            height: 56px;
+            background-color: #16161A;
+            border-radius: 28px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .who-icon svg {
+            width: 28px;
+            height: 28px;
+        }
+
+        .who-title {
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        .who-desc {
+            font-size: 15px;
+            color: #6B6B70;
+            text-align: center;
+            line-height: 1.5;
+        }
+
+        /* Final CTA Section */
+        .final-cta {
+            background-color: #0B0B0E;
+            padding: 100px 120px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 28px;
+        }
+
+        .cta-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 24px;
+            text-align: center;
+        }
+
+        .cta-headline {
+            font-size: 48px;
+            font-weight: 700;
+            letter-spacing: -1px;
+        }
+
+        .cta-subtext {
+            font-size: 18px;
+            color: #6B6B70;
+        }
+
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background-color: #FAFAF9;
+            color: #0B0B0E;
+            padding: 18px 40px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 600;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 20px rgba(250, 250, 249, 0.2);
+        }
+
+        .cta-button img {
+            width: 21px;
+            height: 21px;
+        }
+
+        .trust-line {
+            font-size: 14px;
+            color: #4A4A50;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #16161A;
+            padding: 64px 120px;
+            display: flex;
+            flex-direction: column;
+            gap: 48px;
+        }
+
+        .footer-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .footer-brand {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            max-width: 300px;
+        }
+
+        .footer-logo-row {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .footer-logo-row img {
+            width: 32px;
+            height: 32px;
+            border-radius: 6px;
+        }
+
+        .footer-logo-text {
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        .footer-tagline {
+            font-size: 14px;
+            color: #6B6B70;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 80px;
+        }
+
+        .footer-column {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .footer-column-title {
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .footer-column-links {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .footer-column-links a {
+            font-size: 14px;
+            color: #6B6B70;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .footer-column-links a:hover {
+            color: #FAFAF9;
+        }
+
+        .footer-divider {
+            height: 1px;
+            background-color: #2A2A2E;
+            width: 100%;
+        }
+
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer-copyright {
+            font-size: 13px;
+            color: #4A4A50;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1200px) {
+            .hero {
+                padding: 80px 60px;
+            }
+            
+            .how-it-works,
+            .why-better,
+            .product-preview,
+            .who-its-for,
+            .final-cta {
+                padding: 80px 60px;
+            }
+
+            .footer {
+                padding: 48px 60px;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .hero {
+                flex-direction: column;
+                text-align: center;
+                padding: 60px 40px;
+            }
+
+            .hero-content {
+                align-items: center;
+            }
+
+            .hero-headline {
+                font-size: 44px;
+            }
+
+            .hero-subtext {
+                text-align: center;
+            }
+
+            .hero-image {
+                width: 300px;
+            }
+
+            .steps-row {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .step-card {
+                width: 100%;
+                max-width: 400px;
+            }
+
+            .benefits-grid {
+                flex-direction: column;
+            }
+
+            .benefit-card {
+                min-width: 100%;
+            }
+
+            .preview-cards {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .preview-card {
+                width: 100%;
+                max-width: 400px;
+            }
+
+            .who-grid {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .who-card {
+                width: 100%;
+                max-width: 400px;
+            }
+
+            .footer-top {
+                flex-direction: column;
+                gap: 40px;
+            }
+
+            .footer-links {
+                gap: 40px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                padding: 40px 24px;
+            }
+
+            .how-it-works,
+            .why-better,
+            .product-preview,
+            .who-its-for,
+            .final-cta {
+                padding: 60px 24px;
+            }
+
+            .footer {
+                padding: 40px 24px;
+            }
+
+            .hero-headline {
+                font-size: 36px;
+            }
+
+            .section-title {
+                font-size: 32px;
+            }
+
+            .cta-headline {
+                font-size: 32px;
+            }
+
+            .why-better .section-header {
+                text-align: center;
+                align-items: center;
+            }
+        }
+
+        /* SVG Icons */
+        .icon {
+            fill: none;
+            stroke: #FAFAF9;
+            stroke-width: 2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="logo-row">
+                <img src="images/moni-ios-iOS-Default-1024x1024@1x.png" alt="MoniDex AI Logo" class="logo-icon">
+                <span class="logo-text">MoniDex AI</span>
+            </div>
+            <h1 class="hero-headline">Know What Your<br>Cards Are Worth.</h1>
+            <p class="hero-subtext">Scan any Pokémon card. See real prices from actual sales. No guessing, no spreadsheets, no digging through eBay.</p>
+            <a href="#" class="primary-cta">
+                <img src="images/apple-logo.png" alt="Apple">
+                Download on iOS
+            </a>
+        </div>
+        <img src="images/iphone17pro.png" alt="MoniDex AI App Preview" class="hero-image">
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="how-it-works">
+        <div class="section-header">
+            <span class="section-label">HOW IT WORKS</span>
+            <h2 class="section-title">Three steps. That's it.</h2>
+        </div>
+        <div class="steps-row">
+            <div class="step-card">
+                <div class="step-number">1</div>
+                <svg class="step-icon icon" viewBox="0 0 24 24">
+                    <path d="M3 7V5a2 2 0 0 1 2-2h2"></path>
+                    <path d="M17 3h2a2 2 0 0 1 2 2v2"></path>
+                    <path d="M21 17v2a2 2 0 0 1-2 2h-2"></path>
+                    <path d="M7 21H5a2 2 0 0 1-2-2v-2"></path>
+                </svg>
+                <h3 class="step-title">Scan a card</h3>
+                <p class="step-desc">Point your camera at any Pokémon card. The app identifies it instantly.</p>
+            </div>
+            <div class="step-card">
+                <div class="step-number">2</div>
+                <svg class="step-icon icon" viewBox="0 0 24 24">
+                    <line x1="8" y1="6" x2="21" y2="6"></line>
+                    <line x1="8" y1="12" x2="21" y2="12"></line>
+                    <line x1="8" y1="18" x2="21" y2="18"></line>
+                    <line x1="3" y1="6" x2="3.01" y2="6"></line>
+                    <line x1="3" y1="12" x2="3.01" y2="12"></line>
+                    <line x1="3" y1="18" x2="3.01" y2="18"></line>
+                </svg>
+                <h3 class="step-title">See real sales</h3>
+                <p class="step-desc">View actual sold prices from eBay—filtered by grading company and condition.</p>
+            </div>
+            <div class="step-card">
+                <div class="step-number">3</div>
+                <svg class="step-icon icon" viewBox="0 0 24 24">
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                </svg>
+                <h3 class="step-title">Know what it's worth</h3>
+                <p class="step-desc">Make informed decisions. Buy, sell, or hold with confidence.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why It's Better Section -->
+    <section class="why-better">
+        <div class="section-header">
+            <span class="section-label">WHY IT'S BETTER</span>
+            <h2 class="section-title">Prices you can trust.</h2>
+            <p class="section-subtitle">No guesswork. No averages pulled from thin air. Just real data from real sales.</p>
+        </div>
+        <div class="benefits-grid">
+            <div class="benefit-card">
+                <svg class="benefit-icon icon" viewBox="0 0 24 24">
+                    <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                    <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
+                    <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+                </svg>
+                <h3 class="benefit-title">Real sold listings</h3>
+                <p class="benefit-desc">We pull actual completed sales from eBay. Not asking prices. Not estimates.</p>
+            </div>
+            <div class="benefit-card">
+                <svg class="benefit-icon icon" viewBox="0 0 24 24">
+                    <circle cx="12" cy="8" r="7"></circle>
+                    <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+                </svg>
+                <h3 class="benefit-title">PSA, BGS, CGC support</h3>
+                <p class="benefit-desc">Filter by the grading company that matters to you. See prices for each grade level.</p>
+            </div>
+            <div class="benefit-card">
+                <svg class="benefit-icon icon" viewBox="0 0 24 24">
+                    <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                </svg>
+                <h3 class="benefit-title">No manual searching</h3>
+                <p class="benefit-desc">Stop scrolling through eBay listings. Point, scan, done. The data comes to you.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Preview Section -->
+    <section class="product-preview">
+        <div class="section-header">
+            <span class="section-label">THE APP</span>
+            <h2 class="section-title">Price clarity at a glance.</h2>
+            <p class="section-subtitle">Clean interface. Real data. Nothing in the way.</p>
+        </div>
+        <div class="preview-cards">
+            <div class="preview-card">
+                <div class="preview-header">
+                    <div class="preview-icon">
+                        <svg class="icon" viewBox="0 0 24 24">
+                            <path d="M3 3v18h18"></path>
+                            <path d="M18.7 8l-5.1 5.2-2.8-2.7L7 14.3"></path>
+                        </svg>
+                    </div>
+                    <div class="preview-title-group">
+                        <span class="preview-title">Price by Grade</span>
+                        <span class="preview-subtitle">Grade-specific pricing</span>
+                    </div>
+                </div>
+                <p class="preview-desc">See prices broken down by grade. A PSA 10 and a PSA 8 aren't the same value—we show you both.</p>
+            </div>
+            <div class="preview-card">
+                <div class="preview-header">
+                    <div class="preview-icon">
+                        <svg class="icon" viewBox="0 0 24 24">
+                            <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path>
+                            <polyline points="14 2 14 8 20 8"></polyline>
+                            <line x1="16" y1="13" x2="8" y2="13"></line>
+                            <line x1="16" y1="17" x2="8" y2="17"></line>
+                            <line x1="10" y1="9" x2="8" y2="9"></line>
+                        </svg>
+                    </div>
+                    <div class="preview-title-group">
+                        <span class="preview-title">Sales History</span>
+                        <span class="preview-subtitle">Verified transactions</span>
+                    </div>
+                </div>
+                <p class="preview-desc">Every sale with date, price, and a direct link to the original eBay listing for verification.</p>
+            </div>
+            <div class="preview-card">
+                <div class="preview-header">
+                    <div class="preview-icon">
+                        <svg class="icon" viewBox="0 0 24 24">
+                            <polyline points="17 1 21 5 17 9"></polyline>
+                            <path d="M3 11V9a4 4 0 0 1 4-4h14"></path>
+                            <polyline points="7 23 3 19 7 15"></polyline>
+                            <path d="M21 13v2a4 4 0 0 1-4 4H3"></path>
+                        </svg>
+                    </div>
+                    <div class="preview-title-group">
+                        <span class="preview-title">Grader Toggle</span>
+                        <span class="preview-subtitle">Compare markets</span>
+                    </div>
+                </div>
+                <p class="preview-desc">Switch between grading companies with a tap. Compare market values across different authenticators.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Who It's For Section -->
+    <section class="who-its-for">
+        <div class="section-header">
+            <span class="section-label">WHO IT'S FOR</span>
+            <h2 class="section-title">Built for people who care about accuracy.</h2>
+        </div>
+        <div class="who-grid">
+            <div class="who-card">
+                <div class="who-icon">
+                    <svg class="icon" viewBox="0 0 24 24">
+                        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                    </svg>
+                </div>
+                <h3 class="who-title">Collectors</h3>
+                <p class="who-desc">Know exactly what you have. Track your collection's real market value without guesswork.</p>
+            </div>
+            <div class="who-card">
+                <div class="who-icon">
+                    <svg class="icon" viewBox="0 0 24 24">
+                        <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path>
+                        <line x1="7" y1="7" x2="7.01" y2="7"></line>
+                    </svg>
+                </div>
+                <h3 class="who-title">Sellers</h3>
+                <p class="who-desc">Price your cards right the first time. Don't leave money on the table or sit on overpriced listings.</p>
+            </div>
+            <div class="who-card">
+                <div class="who-icon">
+                    <svg class="icon" viewBox="0 0 24 24">
+                        <circle cx="9" cy="21" r="1"></circle>
+                        <circle cx="20" cy="21" r="1"></circle>
+                        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                    </svg>
+                </div>
+                <h3 class="who-title">Buyers</h3>
+                <p class="who-desc">Stop overpaying. Know if a deal is fair before you commit to it.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section class="final-cta">
+        <div class="cta-content">
+            <h2 class="cta-headline">Stop guessing. Start knowing.</h2>
+            <p class="cta-subtext">Download the app and see what your cards are actually worth.</p>
+            <a href="#" class="cta-button">
+                <img src="images/apple-logo.png" alt="Apple">
+                Download on iOS
+            </a>
+            <p class="trust-line">Free to download • No account required to scan</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="footer-brand">
+                <div class="footer-logo-row">
+                    <img src="images/moni-ios-iOS-Default-1024x1024@1x.png" alt="MoniDex AI Logo">
+                    <span class="footer-logo-text">MoniDex AI</span>
+                </div>
+                <p class="footer-tagline">Real Pokémon card prices from real sales.</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-column">
+                    <span class="footer-column-title">Legal</span>
+                    <div class="footer-column-links">
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-divider"></div>
+        <div class="footer-bottom">
+            <p class="footer-copyright">© 2026 MoniDex AI. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
