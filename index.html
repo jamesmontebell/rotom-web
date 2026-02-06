@@ -10,6 +10,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="images/moni-ios-iOS-Default-1024x1024@1x.png">
     <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -28,6 +32,92 @@
             height: auto;
         }
 
+        /* Skip Link */
+        .skip-link {
+            position: absolute;
+            top: -50px;
+            left: 16px;
+            background: #FAFAF9;
+            color: #0B0B0E;
+            padding: 8px 16px;
+            border-radius: 4px;
+            font-size: 14px;
+            font-weight: 600;
+            z-index: 200;
+            transition: top 0.3s ease;
+            text-decoration: none;
+        }
+
+        .skip-link:focus {
+            top: 16px;
+        }
+
+        /* Sticky Nav */
+        .sticky-nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            background-color: rgba(11, 11, 14, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            padding: 14px 120px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transform: translateY(-100%);
+            transition: transform 0.3s ease;
+            border-bottom: 1px solid rgba(42, 42, 46, 0.5);
+        }
+
+        .sticky-nav.visible {
+            transform: translateY(0);
+        }
+
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            color: #FAFAF9;
+        }
+
+        .nav-logo img {
+            width: 28px;
+            height: 28px;
+            border-radius: 6px;
+        }
+
+        .nav-logo span {
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        .nav-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background-color: #FAFAF9;
+            color: #0B0B0E;
+            padding: 10px 20px;
+            border-radius: 100px;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .nav-cta:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 16px rgba(250, 250, 249, 0.15);
+        }
+
+        .nav-cta img {
+            width: 16px;
+            height: 16px;
+        }
+
         /* Hero Section */
         .hero {
             display: flex;
@@ -44,12 +134,22 @@
             flex-direction: column;
             gap: 28px;
             max-width: 500px;
+            opacity: 0;
+            animation: fadeInUp 0.8s ease 0.1s forwards;
         }
 
         .logo-row {
             display: flex;
             align-items: center;
             gap: 12px;
+        }
+
+        .logo-row a {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            color: inherit;
         }
 
         .logo-icon {
@@ -73,7 +173,7 @@
 
         .hero-subtext {
             font-size: 18px;
-            color: #6B6B70;
+            color: #8E8E93;
             line-height: 1.6;
             max-width: 450px;
         }
@@ -89,7 +189,7 @@
             text-decoration: none;
             font-size: 16px;
             font-weight: 600;
-            transition: transform 0.2s, box-shadow 0.2s;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
             width: fit-content;
         }
 
@@ -112,7 +212,7 @@
 
         .available-soon {
             font-size: 14px;
-            color: #6B6B70;
+            color: #8E8E93;
             font-weight: 500;
         }
 
@@ -120,6 +220,9 @@
             width: 375px;
             height: auto;
             flex-shrink: 0;
+            opacity: 0;
+            animation: fadeInUp 0.8s ease 0.35s forwards, float 6s ease-in-out 1.2s infinite;
+            filter: drop-shadow(0 0 40px rgba(250, 250, 249, 0.06));
         }
 
         /* How It Works Section */
@@ -143,7 +246,7 @@
             font-size: 12px;
             font-weight: 600;
             letter-spacing: 2px;
-            color: #6B6B70;
+            color: #8E8E93;
             text-transform: uppercase;
         }
 
@@ -155,7 +258,7 @@
 
         .section-subtitle {
             font-size: 18px;
-            color: #6B6B70;
+            color: #8E8E93;
             max-width: 600px;
             line-height: 1.5;
         }
@@ -177,6 +280,14 @@
             align-items: center;
             gap: 20px;
             width: 320px;
+            border: 1px solid transparent;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+        }
+
+        .step-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            border-color: #2A2A2E;
         }
 
         .step-number {
@@ -204,7 +315,7 @@
 
         .step-desc {
             font-size: 15px;
-            color: #6B6B70;
+            color: #8E8E93;
             text-align: center;
             line-height: 1.5;
         }
@@ -235,6 +346,14 @@
             align-items: center;
             gap: 16px;
             width: 320px;
+            border: 1px solid transparent;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            border-color: #2A2A2E;
         }
 
         .benefit-icon {
@@ -249,7 +368,7 @@
 
         .benefit-desc {
             font-size: 15px;
-            color: #6B6B70;
+            color: #8E8E93;
             line-height: 1.5;
             text-align: center;
         }
@@ -279,6 +398,14 @@
             flex-direction: column;
             gap: 16px;
             width: 280px;
+            border: 1px solid transparent;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+        }
+
+        .preview-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            border-color: #2A2A2E;
         }
 
         .preview-header {
@@ -315,12 +442,12 @@
 
         .preview-subtitle {
             font-size: 13px;
-            color: #6B6B70;
+            color: #8E8E93;
         }
 
         .preview-desc {
             font-size: 14px;
-            color: #6B6B70;
+            color: #8E8E93;
             line-height: 1.5;
         }
 
@@ -353,6 +480,14 @@
             align-items: center;
             gap: 16px;
             width: 350px;
+            border: 1px solid transparent;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+        }
+
+        .who-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            border-color: #2A2A2E;
         }
 
         .who-icon {
@@ -377,7 +512,7 @@
 
         .who-desc {
             font-size: 15px;
-            color: #6B6B70;
+            color: #8E8E93;
             text-align: center;
             line-height: 1.5;
         }
@@ -408,7 +543,7 @@
 
         .cta-subtext {
             font-size: 18px;
-            color: #6B6B70;
+            color: #8E8E93;
         }
 
         .cta-button {
@@ -418,11 +553,11 @@
             background-color: #FAFAF9;
             color: #0B0B0E;
             padding: 18px 40px;
-            border-radius: 8px;
+            border-radius: 100px;
             text-decoration: none;
             font-size: 16px;
             font-weight: 600;
-            transition: transform 0.2s, box-shadow 0.2s;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
 
         .cta-button:hover {
@@ -437,7 +572,7 @@
 
         .trust-line {
             font-size: 14px;
-            color: #4A4A50;
+            color: #6B6B70;
         }
 
         /* Footer */
@@ -481,7 +616,7 @@
 
         .footer-tagline {
             font-size: 14px;
-            color: #6B6B70;
+            color: #8E8E93;
         }
 
         .footer-links {
@@ -508,7 +643,7 @@
 
         .footer-column-links a {
             font-size: 14px;
-            color: #6B6B70;
+            color: #8E8E93;
             text-decoration: none;
             transition: color 0.2s;
         }
@@ -531,7 +666,70 @@
 
         .footer-copyright {
             font-size: 13px;
-            color: #4A4A50;
+            color: #6B6B70;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-12px); }
+        }
+
+        /* Scroll Reveal */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Toast Notification */
+        .toast {
+            position: fixed;
+            bottom: 32px;
+            left: 50%;
+            transform: translateX(-50%) translateY(100px);
+            background-color: #1C1C20;
+            color: #FAFAF9;
+            padding: 14px 28px;
+            border-radius: 100px;
+            font-size: 14px;
+            font-weight: 500;
+            font-family: 'Outfit', sans-serif;
+            border: 1px solid #2A2A2E;
+            z-index: 200;
+            opacity: 0;
+            transition: transform 0.4s ease, opacity 0.4s ease;
+            pointer-events: none;
+        }
+
+        .toast.show {
+            transform: translateX(-50%) translateY(0);
+            opacity: 1;
+        }
+
+        /* SVG Icons */
+        .icon {
+            fill: none;
+            stroke: #FAFAF9;
+            stroke-width: 2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
         }
 
         /* Responsive Design */
@@ -539,7 +737,11 @@
             .hero {
                 padding: 80px 60px;
             }
-            
+
+            .sticky-nav {
+                padding: 14px 60px;
+            }
+
             .how-it-works,
             .why-better,
             .product-preview,
@@ -635,6 +837,10 @@
                 padding: 40px 24px;
             }
 
+            .sticky-nav {
+                padding: 14px 24px;
+            }
+
             .how-it-works,
             .why-better,
             .product-preview,
@@ -660,229 +866,256 @@
             }
         }
 
-        /* SVG Icons */
-        .icon {
-            fill: none;
-            stroke: #FAFAF9;
-            stroke-width: 2;
-            stroke-linecap: round;
-            stroke-linejoin: round;
+        @media (prefers-reduced-motion: reduce) {
+            html {
+                scroll-behavior: auto;
+            }
+
+            .hero-content,
+            .hero-image {
+                opacity: 1;
+                animation: none;
+            }
+
+            .reveal {
+                opacity: 1;
+                transform: none;
+                transition: none;
+            }
         }
     </style>
 </head>
 <body>
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <div class="logo-row">
-                <img src="images/moni-ios-iOS-Default-1024x1024@1x.png" alt="MoniDex AI Logo" class="logo-icon">
-                <span class="logo-text">MoniDex AI</span>
+    <a href="#main" class="skip-link">Skip to content</a>
+
+    <!-- Sticky Nav -->
+    <nav class="sticky-nav" aria-label="Main navigation">
+        <a href="#" class="nav-logo" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;">
+            <img src="images/moni-ios-iOS-Default-1024x1024@1x.png" alt="MoniDex AI">
+            <span>MoniDex AI</span>
+        </a>
+        <a href="#" class="nav-cta" onclick="showToast('Coming soon! We\u2019ll notify you at launch.'); return false;">
+            <img src="images/apple-logo.png" alt="Apple">
+            Download
+        </a>
+    </nav>
+
+    <main id="main">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <div class="logo-row">
+                    <a href="#" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;">
+                        <img src="images/moni-ios-iOS-Default-1024x1024@1x.png" alt="MoniDex AI Logo" class="logo-icon">
+                        <span class="logo-text">MoniDex AI</span>
+                    </a>
+                </div>
+                <h1 class="hero-headline">Know What Your<br>Cards Are Worth.</h1>
+                <p class="hero-subtext">Scan any Pokémon card. See real prices from actual sales. No guessing, no spreadsheets, no digging through eBay.</p>
+                <div class="cta-wrapper">
+                    <a href="#" class="primary-cta" onclick="showToast('Coming soon! We\u2019ll notify you at launch.'); return false;">
+                        <img src="images/apple-logo.png" alt="Apple">
+                        Download on iOS
+                    </a>
+                    <span class="available-soon">Available soon</span>
+                </div>
             </div>
-            <h1 class="hero-headline">Know What Your<br>Cards Are Worth.</h1>
-            <p class="hero-subtext">Scan any Pokémon card. See real prices from actual sales. No guessing, no spreadsheets, no digging through eBay.</p>
-            <div class="cta-wrapper">
-                <a href="#" class="primary-cta" onclick="alert('Available soon!'); return false;">
+            <img src="images/iphone17pro.png" alt="MoniDex AI app showing Pokémon card scan with live price data" class="hero-image">
+        </section>
+
+        <!-- How It Works Section -->
+        <section class="how-it-works">
+            <div class="section-header reveal">
+                <span class="section-label">HOW IT WORKS</span>
+                <h2 class="section-title">Three steps. That's it.</h2>
+            </div>
+            <div class="steps-row">
+                <div class="step-card reveal">
+                    <div class="step-number">1</div>
+                    <svg class="step-icon icon" viewBox="0 0 24 24">
+                        <path d="M3 7V5a2 2 0 0 1 2-2h2"></path>
+                        <path d="M17 3h2a2 2 0 0 1 2 2v2"></path>
+                        <path d="M21 17v2a2 2 0 0 1-2 2h-2"></path>
+                        <path d="M7 21H5a2 2 0 0 1-2-2v-2"></path>
+                    </svg>
+                    <h3 class="step-title">Scan a card</h3>
+                    <p class="step-desc">Point your camera at any Pokémon card. The app identifies it instantly.</p>
+                </div>
+                <div class="step-card reveal">
+                    <div class="step-number">2</div>
+                    <svg class="step-icon icon" viewBox="0 0 24 24">
+                        <line x1="8" y1="6" x2="21" y2="6"></line>
+                        <line x1="8" y1="12" x2="21" y2="12"></line>
+                        <line x1="8" y1="18" x2="21" y2="18"></line>
+                        <line x1="3" y1="6" x2="3.01" y2="6"></line>
+                        <line x1="3" y1="12" x2="3.01" y2="12"></line>
+                        <line x1="3" y1="18" x2="3.01" y2="18"></line>
+                    </svg>
+                    <h3 class="step-title">See real sales</h3>
+                    <p class="step-desc">View actual sold prices from eBay—filtered by grading company and condition.</p>
+                </div>
+                <div class="step-card reveal">
+                    <div class="step-number">3</div>
+                    <svg class="step-icon icon" viewBox="0 0 24 24">
+                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                        <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                    </svg>
+                    <h3 class="step-title">Know what it's worth</h3>
+                    <p class="step-desc">Make informed decisions. Buy, sell, or hold with confidence.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why It's Better Section -->
+        <section class="why-better">
+            <div class="section-header reveal">
+                <span class="section-label">WHY IT'S BETTER</span>
+                <h2 class="section-title">Prices you can trust.</h2>
+                <p class="section-subtitle">No guesswork. No averages pulled from thin air. Just real data from real sales.</p>
+            </div>
+            <div class="benefits-grid">
+                <div class="benefit-card reveal">
+                    <svg class="benefit-icon icon" viewBox="0 0 24 24">
+                        <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                        <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
+                        <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+                    </svg>
+                    <h3 class="benefit-title">Real sold listings</h3>
+                    <p class="benefit-desc">We pull actual completed sales from eBay. Not asking prices. Not estimates.</p>
+                </div>
+                <div class="benefit-card reveal">
+                    <svg class="benefit-icon icon" viewBox="0 0 24 24">
+                        <circle cx="12" cy="8" r="7"></circle>
+                        <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+                    </svg>
+                    <h3 class="benefit-title">PSA, BGS, CGC support</h3>
+                    <p class="benefit-desc">Filter by the grading company that matters to you. See prices for each grade level.</p>
+                </div>
+                <div class="benefit-card reveal">
+                    <svg class="benefit-icon icon" viewBox="0 0 24 24">
+                        <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                    </svg>
+                    <h3 class="benefit-title">No manual searching</h3>
+                    <p class="benefit-desc">Stop scrolling through eBay listings. Point, scan, done. The data comes to you.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Product Preview Section -->
+        <section class="product-preview">
+            <div class="section-header reveal">
+                <span class="section-label">THE APP</span>
+                <h2 class="section-title">Price clarity at a glance.</h2>
+                <p class="section-subtitle">Clean interface. Real data. Nothing in the way.</p>
+            </div>
+            <div class="preview-cards">
+                <div class="preview-card reveal">
+                    <div class="preview-header">
+                        <div class="preview-icon">
+                            <svg class="icon" viewBox="0 0 24 24">
+                                <path d="M3 3v18h18"></path>
+                                <path d="M18.7 8l-5.1 5.2-2.8-2.7L7 14.3"></path>
+                            </svg>
+                        </div>
+                        <div class="preview-title-group">
+                            <span class="preview-title">Price by Grade</span>
+                            <span class="preview-subtitle">Grade-specific pricing</span>
+                        </div>
+                    </div>
+                    <p class="preview-desc">See prices broken down by grade. A PSA 10 and a PSA 8 aren't the same value—we show you both.</p>
+                </div>
+                <div class="preview-card reveal">
+                    <div class="preview-header">
+                        <div class="preview-icon">
+                            <svg class="icon" viewBox="0 0 24 24">
+                                <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path>
+                                <polyline points="14 2 14 8 20 8"></polyline>
+                                <line x1="16" y1="13" x2="8" y2="13"></line>
+                                <line x1="16" y1="17" x2="8" y2="17"></line>
+                                <line x1="10" y1="9" x2="8" y2="9"></line>
+                            </svg>
+                        </div>
+                        <div class="preview-title-group">
+                            <span class="preview-title">Sales History</span>
+                            <span class="preview-subtitle">Verified transactions</span>
+                        </div>
+                    </div>
+                    <p class="preview-desc">Every sale with date, price, and a direct link to the original eBay listing for verification.</p>
+                </div>
+                <div class="preview-card reveal">
+                    <div class="preview-header">
+                        <div class="preview-icon">
+                            <svg class="icon" viewBox="0 0 24 24">
+                                <polyline points="17 1 21 5 17 9"></polyline>
+                                <path d="M3 11V9a4 4 0 0 1 4-4h14"></path>
+                                <polyline points="7 23 3 19 7 15"></polyline>
+                                <path d="M21 13v2a4 4 0 0 1-4 4H3"></path>
+                            </svg>
+                        </div>
+                        <div class="preview-title-group">
+                            <span class="preview-title">Grader Toggle</span>
+                            <span class="preview-subtitle">Compare markets</span>
+                        </div>
+                    </div>
+                    <p class="preview-desc">Switch between grading companies with a tap. Compare market values across different authenticators.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Who It's For Section -->
+        <section class="who-its-for">
+            <div class="section-header reveal">
+                <span class="section-label">WHO IT'S FOR</span>
+                <h2 class="section-title">Built for people who care about accuracy.</h2>
+            </div>
+            <div class="who-grid">
+                <div class="who-card reveal">
+                    <div class="who-icon">
+                        <svg class="icon" viewBox="0 0 24 24">
+                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="who-title">Collectors</h3>
+                    <p class="who-desc">Know exactly what you have. Track your collection's real market value without guesswork.</p>
+                </div>
+                <div class="who-card reveal">
+                    <div class="who-icon">
+                        <svg class="icon" viewBox="0 0 24 24">
+                            <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path>
+                            <line x1="7" y1="7" x2="7.01" y2="7"></line>
+                        </svg>
+                    </div>
+                    <h3 class="who-title">Sellers</h3>
+                    <p class="who-desc">Price your cards right the first time. Don't leave money on the table or sit on overpriced listings.</p>
+                </div>
+                <div class="who-card reveal">
+                    <div class="who-icon">
+                        <svg class="icon" viewBox="0 0 24 24">
+                            <circle cx="9" cy="21" r="1"></circle>
+                            <circle cx="20" cy="21" r="1"></circle>
+                            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                        </svg>
+                    </div>
+                    <h3 class="who-title">Buyers</h3>
+                    <p class="who-desc">Stop overpaying. Know if a deal is fair before you commit to it.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final CTA Section -->
+        <section class="final-cta">
+            <div class="cta-content reveal">
+                <h2 class="cta-headline">Stop guessing. Start knowing.</h2>
+                <p class="cta-subtext">Download the app and see what your cards are actually worth.</p>
+                <a href="#" class="cta-button" onclick="showToast('Coming soon! We\u2019ll notify you at launch.'); return false;">
                     <img src="images/apple-logo.png" alt="Apple">
                     Download on iOS
                 </a>
                 <span class="available-soon">Available soon</span>
+                <p class="trust-line">Free to download</p>
             </div>
-        </div>
-        <img src="images/iphone17pro.png" alt="MoniDex AI App Preview" class="hero-image">
-    </section>
-
-    <!-- How It Works Section -->
-    <section class="how-it-works">
-        <div class="section-header">
-            <span class="section-label">HOW IT WORKS</span>
-            <h2 class="section-title">Three steps. That's it.</h2>
-        </div>
-        <div class="steps-row">
-            <div class="step-card">
-                <div class="step-number">1</div>
-                <svg class="step-icon icon" viewBox="0 0 24 24">
-                    <path d="M3 7V5a2 2 0 0 1 2-2h2"></path>
-                    <path d="M17 3h2a2 2 0 0 1 2 2v2"></path>
-                    <path d="M21 17v2a2 2 0 0 1-2 2h-2"></path>
-                    <path d="M7 21H5a2 2 0 0 1-2-2v-2"></path>
-                </svg>
-                <h3 class="step-title">Scan a card</h3>
-                <p class="step-desc">Point your camera at any Pokémon card. The app identifies it instantly.</p>
-            </div>
-            <div class="step-card">
-                <div class="step-number">2</div>
-                <svg class="step-icon icon" viewBox="0 0 24 24">
-                    <line x1="8" y1="6" x2="21" y2="6"></line>
-                    <line x1="8" y1="12" x2="21" y2="12"></line>
-                    <line x1="8" y1="18" x2="21" y2="18"></line>
-                    <line x1="3" y1="6" x2="3.01" y2="6"></line>
-                    <line x1="3" y1="12" x2="3.01" y2="12"></line>
-                    <line x1="3" y1="18" x2="3.01" y2="18"></line>
-                </svg>
-                <h3 class="step-title">See real sales</h3>
-                <p class="step-desc">View actual sold prices from eBay—filtered by grading company and condition.</p>
-            </div>
-            <div class="step-card">
-                <div class="step-number">3</div>
-                <svg class="step-icon icon" viewBox="0 0 24 24">
-                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                </svg>
-                <h3 class="step-title">Know what it's worth</h3>
-                <p class="step-desc">Make informed decisions. Buy, sell, or hold with confidence.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Why It's Better Section -->
-    <section class="why-better">
-        <div class="section-header">
-            <span class="section-label">WHY IT'S BETTER</span>
-            <h2 class="section-title">Prices you can trust.</h2>
-            <p class="section-subtitle">No guesswork. No averages pulled from thin air. Just real data from real sales.</p>
-        </div>
-        <div class="benefits-grid">
-            <div class="benefit-card">
-                <svg class="benefit-icon icon" viewBox="0 0 24 24">
-                    <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
-                    <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
-                    <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
-                </svg>
-                <h3 class="benefit-title">Real sold listings</h3>
-                <p class="benefit-desc">We pull actual completed sales from eBay. Not asking prices. Not estimates.</p>
-            </div>
-            <div class="benefit-card">
-                <svg class="benefit-icon icon" viewBox="0 0 24 24">
-                    <circle cx="12" cy="8" r="7"></circle>
-                    <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
-                </svg>
-                <h3 class="benefit-title">PSA, BGS, CGC support</h3>
-                <p class="benefit-desc">Filter by the grading company that matters to you. See prices for each grade level.</p>
-            </div>
-            <div class="benefit-card">
-                <svg class="benefit-icon icon" viewBox="0 0 24 24">
-                    <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
-                </svg>
-                <h3 class="benefit-title">No manual searching</h3>
-                <p class="benefit-desc">Stop scrolling through eBay listings. Point, scan, done. The data comes to you.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Product Preview Section -->
-    <section class="product-preview">
-        <div class="section-header">
-            <span class="section-label">THE APP</span>
-            <h2 class="section-title">Price clarity at a glance.</h2>
-            <p class="section-subtitle">Clean interface. Real data. Nothing in the way.</p>
-        </div>
-        <div class="preview-cards">
-            <div class="preview-card">
-                <div class="preview-header">
-                    <div class="preview-icon">
-                        <svg class="icon" viewBox="0 0 24 24">
-                            <path d="M3 3v18h18"></path>
-                            <path d="M18.7 8l-5.1 5.2-2.8-2.7L7 14.3"></path>
-                        </svg>
-                    </div>
-                    <div class="preview-title-group">
-                        <span class="preview-title">Price by Grade</span>
-                        <span class="preview-subtitle">Grade-specific pricing</span>
-                    </div>
-                </div>
-                <p class="preview-desc">See prices broken down by grade. A PSA 10 and a PSA 8 aren't the same value—we show you both.</p>
-            </div>
-            <div class="preview-card">
-                <div class="preview-header">
-                    <div class="preview-icon">
-                        <svg class="icon" viewBox="0 0 24 24">
-                            <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path>
-                            <polyline points="14 2 14 8 20 8"></polyline>
-                            <line x1="16" y1="13" x2="8" y2="13"></line>
-                            <line x1="16" y1="17" x2="8" y2="17"></line>
-                            <line x1="10" y1="9" x2="8" y2="9"></line>
-                        </svg>
-                    </div>
-                    <div class="preview-title-group">
-                        <span class="preview-title">Sales History</span>
-                        <span class="preview-subtitle">Verified transactions</span>
-                    </div>
-                </div>
-                <p class="preview-desc">Every sale with date, price, and a direct link to the original eBay listing for verification.</p>
-            </div>
-            <div class="preview-card">
-                <div class="preview-header">
-                    <div class="preview-icon">
-                        <svg class="icon" viewBox="0 0 24 24">
-                            <polyline points="17 1 21 5 17 9"></polyline>
-                            <path d="M3 11V9a4 4 0 0 1 4-4h14"></path>
-                            <polyline points="7 23 3 19 7 15"></polyline>
-                            <path d="M21 13v2a4 4 0 0 1-4 4H3"></path>
-                        </svg>
-                    </div>
-                    <div class="preview-title-group">
-                        <span class="preview-title">Grader Toggle</span>
-                        <span class="preview-subtitle">Compare markets</span>
-                    </div>
-                </div>
-                <p class="preview-desc">Switch between grading companies with a tap. Compare market values across different authenticators.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Who It's For Section -->
-    <section class="who-its-for">
-        <div class="section-header">
-            <span class="section-label">WHO IT'S FOR</span>
-            <h2 class="section-title">Built for people who care about accuracy.</h2>
-        </div>
-        <div class="who-grid">
-            <div class="who-card">
-                <div class="who-icon">
-                    <svg class="icon" viewBox="0 0 24 24">
-                        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
-                    </svg>
-                </div>
-                <h3 class="who-title">Collectors</h3>
-                <p class="who-desc">Know exactly what you have. Track your collection's real market value without guesswork.</p>
-            </div>
-            <div class="who-card">
-                <div class="who-icon">
-                    <svg class="icon" viewBox="0 0 24 24">
-                        <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path>
-                        <line x1="7" y1="7" x2="7.01" y2="7"></line>
-                    </svg>
-                </div>
-                <h3 class="who-title">Sellers</h3>
-                <p class="who-desc">Price your cards right the first time. Don't leave money on the table or sit on overpriced listings.</p>
-            </div>
-            <div class="who-card">
-                <div class="who-icon">
-                    <svg class="icon" viewBox="0 0 24 24">
-                        <circle cx="9" cy="21" r="1"></circle>
-                        <circle cx="20" cy="21" r="1"></circle>
-                        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
-                    </svg>
-                </div>
-                <h3 class="who-title">Buyers</h3>
-                <p class="who-desc">Stop overpaying. Know if a deal is fair before you commit to it.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Final CTA Section -->
-    <section class="final-cta">
-        <div class="cta-content">
-            <h2 class="cta-headline">Stop guessing. Start knowing.</h2>
-            <p class="cta-subtext">Download the app and see what your cards are actually worth.</p>
-            <a href="#" class="cta-button" onclick="alert('Available soon!'); return false;">
-                <img src="images/apple-logo.png" alt="Apple">
-                Download on iOS
-            </a>
-            <span class="available-soon">Available soon</span>
-            <p class="trust-line">Free to download</p>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <!-- Footer -->
     <footer class="footer">
@@ -909,5 +1142,53 @@
             <p class="footer-copyright">© 2026 MoniDex AI. All rights reserved.</p>
         </div>
     </footer>
+
+    <!-- Toast -->
+    <div class="toast" id="toast" role="alert" aria-live="polite"></div>
+
+    <script>
+        // Toast notification
+        function showToast(message) {
+            var toast = document.getElementById('toast');
+            toast.textContent = message;
+            toast.classList.add('show');
+            clearTimeout(toast._timeout);
+            toast._timeout = setTimeout(function() {
+                toast.classList.remove('show');
+            }, 3000);
+        }
+
+        // Sticky nav — appears after scrolling past the hero
+        var nav = document.querySelector('.sticky-nav');
+        var hero = document.querySelector('.hero');
+
+        var navObserver = new IntersectionObserver(function(entries) {
+            nav.classList.toggle('visible', !entries[0].isIntersecting);
+        }, { threshold: 0 });
+
+        navObserver.observe(hero);
+
+        // Scroll reveal with stagger
+        var revealObserver = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.15 });
+
+        // Apply stagger delays to cards within the same container
+        document.querySelectorAll('.steps-row, .benefits-grid, .preview-cards, .who-grid').forEach(function(container) {
+            var cards = container.querySelectorAll('.reveal');
+            cards.forEach(function(card, i) {
+                card.style.transitionDelay = (i * 0.15) + 's';
+            });
+        });
+
+        document.querySelectorAll('.reveal').forEach(function(el) {
+            revealObserver.observe(el);
+        });
+    </script>
 </body>
 </html>
