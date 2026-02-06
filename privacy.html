@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - MoniDex AI</title>
+    <meta name="description" content="Privacy Policy for MoniDex AI - Learn how we collect, use, and protect your information.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="images/moni-ios-iOS-Default-1024x1024@1x.png">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background-color: #0B0B0E;
+            color: #FAFAF9;
+            line-height: 1.5;
+        }
+
+        a {
+            color: #FAFAF9;
+        }
+
+        /* Header */
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 32px 120px;
+            max-width: 1440px;
+            margin: 0 auto;
+        }
+
+        .logo-row {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            color: #FAFAF9;
+        }
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 8px;
+            object-fit: cover;
+        }
+
+        .logo-text {
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        .back-link {
+            font-size: 14px;
+            color: #6B6B70;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .back-link:hover {
+            color: #FAFAF9;
+        }
+
+        /* Content */
+        .legal-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 60px 120px 100px;
+        }
+
+        .legal-content h1 {
+            font-size: 40px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            margin-bottom: 12px;
+        }
+
+        .last-updated {
+            font-size: 14px;
+            color: #6B6B70;
+            margin-bottom: 48px;
+        }
+
+        .legal-content h2 {
+            font-size: 22px;
+            font-weight: 600;
+            margin-top: 48px;
+            margin-bottom: 20px;
+        }
+
+        .legal-content p {
+            font-size: 15px;
+            color: #A0A0A5;
+            line-height: 1.7;
+            margin-bottom: 16px;
+        }
+
+        .legal-content ul {
+            list-style: none;
+            margin-bottom: 16px;
+            padding-left: 20px;
+        }
+
+        .legal-content ul li {
+            font-size: 15px;
+            color: #A0A0A5;
+            line-height: 1.7;
+            margin-bottom: 8px;
+            position: relative;
+        }
+
+        .legal-content ul li::before {
+            content: "";
+            position: absolute;
+            left: -16px;
+            top: 10px;
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            background-color: #4A4A50;
+        }
+
+        .legal-content a {
+            color: #FAFAF9;
+            text-decoration: underline;
+            text-underline-offset: 2px;
+        }
+
+        .legal-content a:hover {
+            color: #FFFFFF;
+        }
+
+        .contact-info {
+            margin-top: 48px;
+            padding: 24px;
+            background-color: #16161A;
+            border-radius: 12px;
+        }
+
+        .contact-info p {
+            margin-bottom: 8px;
+        }
+
+        .contact-info p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #16161A;
+            padding: 64px 120px;
+            display: flex;
+            flex-direction: column;
+            gap: 48px;
+        }
+
+        .footer-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .footer-brand {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            max-width: 300px;
+        }
+
+        .footer-logo-row {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            color: #FAFAF9;
+        }
+
+        .footer-logo-row img {
+            width: 32px;
+            height: 32px;
+            border-radius: 6px;
+        }
+
+        .footer-logo-text {
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        .footer-tagline {
+            font-size: 14px;
+            color: #6B6B70;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 80px;
+        }
+
+        .footer-column {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .footer-column-title {
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .footer-column-links {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .footer-column-links a {
+            font-size: 14px;
+            color: #6B6B70;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .footer-column-links a:hover {
+            color: #FAFAF9;
+        }
+
+        .footer-divider {
+            height: 1px;
+            background-color: #2A2A2E;
+            width: 100%;
+        }
+
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer-copyright {
+            font-size: 13px;
+            color: #4A4A50;
+        }
+
+        /* Responsive */
+        @media (max-width: 1200px) {
+            .header {
+                padding: 32px 60px;
+            }
+
+            .legal-content {
+                padding: 60px 60px 100px;
+            }
+
+            .footer {
+                padding: 48px 60px;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .footer-top {
+                flex-direction: column;
+                gap: 40px;
+            }
+
+            .footer-links {
+                gap: 40px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header {
+                padding: 24px;
+            }
+
+            .legal-content {
+                padding: 40px 24px 80px;
+            }
+
+            .legal-content h1 {
+                font-size: 32px;
+            }
+
+            .legal-content h2 {
+                font-size: 20px;
+            }
+
+            .footer {
+                padding: 40px 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <a href="index.html" class="logo-row">
+            <img src="images/moni-ios-iOS-Default-1024x1024@1x.png" alt="MoniDex AI Logo" class="logo-icon">
+            <span class="logo-text">MoniDex AI</span>
+        </a>
+        <a href="index.html" class="back-link">&larr; Back to Home</a>
+    </header>
+
+    <!-- Content -->
+    <main class="legal-content">
+        <h1>Privacy Policy</h1>
+        <p class="last-updated">Last Updated: February 5, 2026</p>
+
+        <p>MoniDex AI ("App," "we," "us," or "our") is operated by MoniDex. This Privacy Policy explains how we collect, use, disclose, and protect your information when you use the MoniDex AI mobile application and related services (collectively, the "Service"). By using the App, you consent to the practices described in this Privacy Policy. If you do not agree with this Privacy Policy, please do not use the App.</p>
+
+        <h2>1. Information We Collect</h2>
+
+        <p><strong>1.1. Account Information.</strong> When you create an account using Google or Apple Sign-In, we collect the following information from your authentication provider:</p>
+        <ul>
+            <li>Full name</li>
+            <li>Email address</li>
+            <li>Profile image URL</li>
+            <li>Unique user identifier</li>
+        </ul>
+        <p>We do not collect or store passwords. Authentication is handled entirely by Clerk, our third-party authentication provider.</p>
+
+        <p><strong>1.2. Card Scan Data.</strong> When you use the card scanning feature, we collect:</p>
+        <ul>
+            <li>Images of Pokemon TCG cards captured by your device camera</li>
+            <li>Card identification results, including card name, number, set, rarity, and type</li>
+            <li>Pricing and market data associated with identified cards</li>
+            <li>Scan history and metadata</li>
+        </ul>
+
+        <p><strong>1.3. Subscription and Purchase Information.</strong> When you subscribe to or purchase features within the App, the following information is collected and managed by RevenueCat and Apple:</p>
+        <ul>
+            <li>Subscription plan type (monthly, yearly, or lifetime)</li>
+            <li>Purchase transaction records</li>
+            <li>Subscription status and renewal dates</li>
+            <li>App Store receipt data</li>
+        </ul>
+        <p>We do not directly collect or store your credit card number, billing address, or other financial payment information. All payment processing is handled by Apple through the App Store.</p>
+
+        <p><strong>1.4. Device and Usage Information.</strong> We may automatically collect certain information about your device, including:</p>
+        <ul>
+            <li>Device type and operating system version</li>
+            <li>App version</li>
+            <li>General usage patterns within the App</li>
+        </ul>
+
+        <p><strong>1.5. Information We Do Not Collect.</strong> We want to be transparent about what we do not collect:</p>
+        <ul>
+            <li>We do not collect precise location data</li>
+            <li>We do not collect contacts or address book information</li>
+            <li>We do not collect microphone or audio data</li>
+            <li>We do not use advertising tracking or behavioral analytics SDKs</li>
+            <li>We do not collect health, financial, or biometric data</li>
+        </ul>
+
+        <h2>2. How We Use Your Information</h2>
+
+        <p>We use the information we collect for the following purposes:</p>
+        <ul>
+            <li>To authenticate your identity and maintain your account</li>
+            <li>To process card images using AI-powered recognition and return card identification and pricing results</li>
+            <li>To display real-time and historical pricing data from third-party marketplaces</li>
+            <li>To manage your subscription and verify your access to premium features</li>
+            <li>To provide customer support and respond to your inquiries</li>
+            <li>To improve, maintain, and develop the App and its features</li>
+            <li>To enforce our Terms and Conditions and protect against misuse</li>
+            <li>To comply with legal obligations</li>
+        </ul>
+
+        <h2>3. How We Share Your Information</h2>
+
+        <p>We do not sell your personal information to third parties.</p>
+
+        <p>We share your information with the following third-party service providers who assist us in operating the App:</p>
+        <ul>
+            <li><strong>Clerk</strong> (<a href="https://clerk.com">clerk.com</a>) — Provides authentication and identity management. Clerk receives your name, email address, and profile image through the OAuth sign-in process. Clerk's privacy policy is available at <a href="https://clerk.com/legal/privacy">clerk.com/legal/privacy</a>.</li>
+            <li><strong>RevenueCat</strong> (<a href="https://revenuecat.com">revenuecat.com</a>) — Manages subscription and purchase data. RevenueCat receives your user identifier and App Store transaction data to manage your subscription status. RevenueCat's privacy policy is available at <a href="https://revenuecat.com/privacy">revenuecat.com/privacy</a>.</li>
+            <li><strong>Apple</strong> — Processes all in-app purchases and subscriptions through the App Store. Apple's privacy policy is available at <a href="https://apple.com/legal/privacy">apple.com/legal/privacy</a>.</li>
+        </ul>
+
+        <p><strong>MoniDex Backend.</strong> Card images and scan requests are transmitted to our backend servers at api.monidex.app for AI-powered card analysis. Our servers process card images to identify cards and retrieve pricing data from third-party sources including TCGPlayer and eBay.</p>
+
+        <p>We may also disclose your information if required by law, legal process, government request, or when we believe disclosure is necessary to protect our rights, your safety, or the safety of others.</p>
+
+        <h2>4. Card Image Processing</h2>
+
+        <p>When you scan a card, the App captures a photograph using your device camera. The image is cropped to the card area and compressed before being transmitted to our servers.</p>
+
+        <p>Card images are sent to our backend servers in base64-encoded format over a secure HTTPS connection for AI analysis.</p>
+
+        <p>Card images are processed in real time for the purpose of identifying the card and retrieving pricing information. We do not retain card images on our servers beyond the time necessary to complete the analysis and return results, unless required for service improvement or legal compliance.</p>
+
+        <p>You retain all ownership rights in the images you capture. By using the scanning feature, you grant us a limited license to process your images solely for the purpose of providing the Service, as described in our Terms and Conditions.</p>
+
+        <h2>5. Data Storage and Security</h2>
+
+        <p>We implement appropriate technical and organizational measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction.</p>
+
+        <p>Authentication tokens are stored securely on your device using encrypted storage provided by the operating system.</p>
+
+        <p>All data transmitted between the App and our servers is encrypted using HTTPS/TLS protocols.</p>
+
+        <p>While we take reasonable steps to protect your information, no method of electronic transmission or storage is 100% secure. We cannot guarantee absolute security of your data.</p>
+
+        <h2>6. Data Retention</h2>
+
+        <p>We retain your account information for as long as your account remains active or as needed to provide you with the Service.</p>
+
+        <p>Card scan images are processed in real time and are not stored on our servers beyond the time necessary to complete the scan, unless required for service improvement or legal compliance.</p>
+
+        <p>Subscription and purchase records are retained by RevenueCat and Apple in accordance with their respective data retention policies.</p>
+
+        <p>If you request deletion of your account, we will delete your personal data from our active systems within thirty (30) days. Residual copies in backup systems will be purged within ninety (90) days. Certain data may be retained as required by law, for fraud prevention, or to resolve disputes.</p>
+
+        <h2>7. Your Rights and Choices</h2>
+
+        <p><strong>Account Deletion.</strong> You may request deletion of your account and associated personal data at any time by using the account deletion feature in the App settings or by contacting us at jamesmontebell99@gmail.com.</p>
+
+        <p><strong>Camera Access.</strong> You may revoke camera permissions at any time through your device settings. This will disable the card scanning functionality.</p>
+
+        <p><strong>Sign Out.</strong> You may sign out of your account at any time through the App settings.</p>
+
+        <p><strong>Subscription Management.</strong> You may manage or cancel your subscription at any time through your Apple ID account settings or through the App settings.</p>
+
+        <p><strong>Data Access and Portability.</strong> You may contact us at jamesmontebell99@gmail.com to request access to the personal data we hold about you or to request a copy of your data in a portable format.</p>
+
+        <p><strong>Correction.</strong> You may request correction of inaccurate personal data by contacting us at jamesmontebell99@gmail.com.</p>
+
+        <h2>8. Children's Privacy</h2>
+
+        <p>The App is not directed to children under the age of 13. We do not knowingly collect personal information from children under 13. If you are under 13, please do not use the App or provide any personal information.</p>
+
+        <p>If we become aware that we have collected personal information from a child under 13 without verification of parental consent, we will take steps to delete that information promptly.</p>
+
+        <p>If you are a parent or guardian and believe your child under 13 has provided us with personal information, please contact us at jamesmontebell99@gmail.com so we can take appropriate action.</p>
+
+        <h2>9. California Privacy Rights</h2>
+
+        <p>If you are a California resident, you may have additional rights under the California Consumer Privacy Act (CCPA), including:</p>
+        <ul>
+            <li>The right to know what personal information we collect, use, and disclose</li>
+            <li>The right to request deletion of your personal information</li>
+            <li>The right to opt out of the sale of your personal information (we do not sell personal information)</li>
+            <li>The right to non-discrimination for exercising your privacy rights</li>
+        </ul>
+
+        <p>To exercise your California privacy rights, please contact us at jamesmontebell99@gmail.com.</p>
+
+        <h2>10. International Data Transfers</h2>
+
+        <p>Your information may be transferred to and processed in countries other than your country of residence. These countries may have data protection laws that differ from those in your jurisdiction.</p>
+
+        <p>By using the App, you consent to the transfer of your information to the United States and other countries where our service providers operate.</p>
+
+        <h2>11. Third-Party Links and Services</h2>
+
+        <p>The App may display pricing data sourced from third-party marketplaces including TCGPlayer and eBay. When you access external links to these services, their own privacy policies govern your interaction with those platforms.</p>
+
+        <p>We are not responsible for the privacy practices of any third-party websites or services linked from the App.</p>
+
+        <h2>12. Push Notifications and Advertising</h2>
+
+        <p>The App does not currently send push notifications. If we introduce push notifications in the future, you will be prompted to grant permission and may opt out at any time through your device settings.</p>
+
+        <p>The App does not display advertisements and does not use advertising tracking technologies or ad network SDKs.</p>
+
+        <h2>13. Changes to This Privacy Policy</h2>
+
+        <p>We may update this Privacy Policy from time to time. If we make material changes, we will notify you through the App or by other appropriate means.</p>
+
+        <p>Your continued use of the App after the effective date of any changes constitutes your acceptance of the updated Privacy Policy.</p>
+
+        <p>We encourage you to review this Privacy Policy periodically to stay informed about how we are protecting your information.</p>
+
+        <h2>14. Contact Us</h2>
+
+        <div class="contact-info">
+            <p>If you have any questions, concerns, or requests regarding this Privacy Policy or our data practices, please contact us at:</p>
+            <p><strong>Email:</strong> jamesmontebell99@gmail.com</p>
+            <p><strong>Website:</strong> <a href="https://monidex.app">monidex.app</a></p>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="footer-brand">
+                <a href="index.html" class="footer-logo-row">
+                    <img src="images/moni-ios-iOS-Default-1024x1024@1x.png" alt="MoniDex AI Logo">
+                    <span class="footer-logo-text">MoniDex AI</span>
+                </a>
+                <p class="footer-tagline">Real Pokémon card prices from real sales.</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-column">
+                    <span class="footer-column-title">Legal</span>
+                    <div class="footer-column-links">
+                        <a href="privacy.html">Privacy Policy</a>
+                        <a href="terms.html">Terms of Service</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-divider"></div>
+        <div class="footer-bottom">
+            <p class="footer-copyright">&copy; 2026 MoniDex AI. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
