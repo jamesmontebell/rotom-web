@@ -1,6 +1,6 @@
 TERMS AND CONDITIONS
 
-Last Updated: February 5, 2026
+Last Updated: February 9, 2026
 
 MoniDex AI ("App," "we," "us," or "our") is operated by MoniDex. These Terms and
 Conditions ("Terms") govern your access to and use of the MoniDex AI mobile
@@ -160,7 +160,9 @@ agree to these Terms, do not use the App.
         your Google or Apple authentication;
      b) Card images captured through the camera for AI-powered card recognition;
      c) Subscription and purchase information managed by RevenueCat;
-     d) Device and usage information for App functionality and improvement.
+     d) Feedback you voluntarily submit through the in-app feedback feature in
+        Settings (e.g., bug reports or feature suggestions);
+     e) Device and usage information for App functionality and improvement.
 
 7.3. We use the following third-party services that may collect and process your
      data in accordance with their own privacy policies:

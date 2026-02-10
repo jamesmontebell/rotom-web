@@ -1,6 +1,6 @@
 PRIVACY POLICY
 
-Last Updated: February 5, 2026
+Last Updated: February 9, 2026
 
 MoniDex AI ("App," "we," "us," or "our") is operated by MoniDex. This Privacy
 Policy explains how we collect, use, disclose, and protect your information when
@@ -52,7 +52,12 @@ the App.
      b) App version;
      c) General usage patterns within the App.
 
-1.5. INFORMATION WE DO NOT COLLECT. We want to be transparent about what we do
+1.5. FEEDBACK. When you submit feedback through the in-app feedback feature in
+     Settings, we collect the text of your message and associate it with your
+     account. We use this information to respond to your inquiries, improve the
+     App, and fix bugs.
+
+1.6. INFORMATION WE DO NOT COLLECT. We want to be transparent about what we do
      not collect:
 
      a) We do not collect precise location data;
@@ -73,9 +78,11 @@ the App.
         marketplaces;
      d) To manage your subscription and verify your access to premium features;
      e) To provide customer support and respond to your inquiries;
-     f) To improve, maintain, and develop the App and its features;
-     g) To enforce our Terms and Conditions and protect against misuse;
-     h) To comply with legal obligations.
+     f) To process feedback you submit through the App to improve our services
+        and respond to you;
+     g) To improve, maintain, and develop the App and its features;
+     h) To enforce our Terms and Conditions and protect against misuse;
+     i) To comply with legal obligations.
 
 
 3. HOW WE SHARE YOUR INFORMATION
@@ -158,10 +165,15 @@ the App.
 6.3. Subscription and purchase records are retained by RevenueCat and Apple in
      accordance with their respective data retention policies.
 
-6.4. If you request deletion of your account, we will delete your personal data
-     from our active systems within thirty (30) days. Residual copies in backup
-     systems will be purged within ninety (90) days. Certain data may be retained
-     as required by law, for fraud prevention, or to resolve disputes.
+6.4. Feedback you submit is retained for as long as your account is active or as
+     needed to improve the Service and respond to you. Feedback is deleted when
+     you request account deletion, in accordance with Section 6.5.
+
+6.5. If you request deletion of your account, we will delete your personal data
+     (including feedback you have submitted) from our active systems within
+     thirty (30) days. Residual copies in backup systems will be purged within
+     ninety (90) days. Certain data may be retained as required by law, for
+     fraud prevention, or to resolve disputes.
 
 
 7. YOUR RIGHTS AND CHOICES
